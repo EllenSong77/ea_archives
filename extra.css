@@ -1,5 +1,3 @@
-/*TODO: Change banner image: girls' avatar and 'ELSANNA' text.*/
-
 .slick-slider > button {
   display: none !important;
 }
@@ -63,9 +61,14 @@
     display: block;
   }
 
+  #nav-header li {
+    background: rgb(255, 255, 255, 1);
+  }
+
   #nav-header a {
     font-weight: normal;
     font-size: 14px;
+    border: none;
   }
 
   .navbar .nav li:hover a,
@@ -84,6 +87,11 @@
 
   .g-logo h1 {
     padding: 0;
+  }
+
+  .g-logo img {
+    margin-left: 10px;
+    content: url(http://www.cp4ever.com/wp-content/uploads/2019/12/2019121904042069.png);
   }
 
   h1.h1logo {
@@ -110,8 +118,57 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 48%;
+    width: 100%;
     display: inline-block;
+  }
+
+  .hot-posts li:nth-child(5),
+  .hot-posts li p,
+  .hot-posts li span {
+    display: none;
+  }
+
+  .hot-posts ul {
+    padding: 0;
+    margin: 0 0 10px 4%;
+    width: 96%;
+  }
+
+  .hot-posts li {
+    clear: none;
+    width: 42%;
+    float: left;
+    margin: 10px 0 0 4%;
+    text-align: center;
+    height: 60px;
+    min-height: 60px;
+    border-radius: 5px;
+  }
+
+  .hot-posts li:nth-child(1) {
+    background-color: #E7793B;
+  }
+
+  .hot-posts li:nth-child(2) {
+    background-color: #6FC299;
+  }
+
+  .hot-posts li:nth-child(3) {
+    background-color: #57B3FF;
+  }
+
+  .hot-posts li:nth-child(4) {
+    background-color: #9963ED;
+  }
+
+  .hot-posts li a {
+    /* 		height: 60px; */
+    line-height: 60px;
+    font-size: 14px;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   #excerpt-title {
