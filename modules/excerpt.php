@@ -16,6 +16,7 @@ $_views = git_get_option('git_post_views_b');
 $_comment = git_get_option('git_post_comment_b');
 $_like = git_get_option('git_post_like_b');
 ?>
+  <div id="excerpt-title">档案室精选</div>
 <?php
 while (have_posts()):
   the_post(); ?>
@@ -25,7 +26,6 @@ while (have_posts()):
     $_thumbnail = true;
   }
   ?>
-  <div id="excerpt-title">档案室精选</div>
   <article class="excerpt<?php
   echo !$_thumbnail ? ' excerpt-nothumbnail' : '' ?>">
 
