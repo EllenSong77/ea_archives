@@ -25,6 +25,7 @@ while (have_posts()):
     $_thumbnail = true;
   }
   ?>
+  <div id="excerpt-title">档案室精选</div>
   <article class="excerpt<?php
   echo !$_thumbnail ? ' excerpt-nothumbnail' : '' ?>">
 
@@ -66,9 +67,9 @@ while (have_posts()):
         <?php
         $excerpt = $post->post_excerpt;
         if (empty($excerpt)) {
-          echo deel_strimwidth(strip_tags(apply_filters('the_content', strip_shortcodes($post->post_content))), 0, git_get_option('git_excerpt_length') < 30 ? git_get_option('git_excerpt_length') : 30, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
+          echo deel_strimwidth(strip_tags(apply_filters('the_content', strip_shortcodes($post->post_content))), 0, git_get_option('git_excerpt_length') < 50 ? git_get_option('git_excerpt_length') : 50, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
         } else {
-          echo deel_strimwidth(strip_tags(apply_filters('the_excerpt', strip_shortcodes($post->post_excerpt))), 0, git_get_option('git_excerpt_length') < 30 ? git_get_option('git_excerpt_length') : 30, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
+          echo deel_strimwidth(strip_tags(apply_filters('the_excerpt', strip_shortcodes($post->post_excerpt))), 0, git_get_option('git_excerpt_length') < 50 ? git_get_option('git_excerpt_length') : 50, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
         } ?>
       </div>
     </div>

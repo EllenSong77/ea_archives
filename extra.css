@@ -20,6 +20,10 @@
 
 @media screen and (max-width: 800px) {
 
+  body.home {
+    background-color: #ffffff;
+  }
+
   .screen-mini button {
     left: auto !important;
     right: 0 !important;
@@ -59,6 +63,32 @@
     width: 90%;
     font-size: 18px;
     color: #000000;
+    border-bottom: none;
+  }
+
+  .hot-posts li > a {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 60%;
+    display: inline-block;
+  }
+
+  #excerpt-title {
+    margin: 0 20px !important;
+    width: 90%;
+    font-size: 18px;
+    color: #000000;
+    line-height: 45px;
+  }
+
+  article.excerpt {
+    width: 90%;
+    margin: 5px 5%;
+    border-bottom: 1px solid #eeeeee;
+    padding: 5px 0;
+    min-height: 70px
   }
 
   .thumb {
@@ -67,7 +97,8 @@
 
   .excerpt h2 > a {
     color: #000000;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   .excerpt .focus {
@@ -82,13 +113,14 @@
   }
 
   .excerpt .note div {
-    font-size: 12px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box !important;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    word-break: break-all;
+    display: none;
+    /* 		font-size: 12px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        display:-webkit-box!important;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:2;
+        word-break:break-all; */
   }
 
   .pageheader.clearfix {
