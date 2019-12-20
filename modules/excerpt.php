@@ -62,13 +62,16 @@ while (have_posts()):
               echo '<img src="' . get_template_directory_uri() . '/css/img/new.gif" alt="24小时内最新">';
             } ?> </a></h2>
       </header>
-      <?php
-      $excerpt = $post->post_excerpt;
-      if (empty($excerpt)) {
-        echo deel_strimwidth(strip_tags(apply_filters('the_content', strip_shortcodes($post->post_content))), 0, git_get_option('git_excerpt_length') < 50 ? git_get_option('git_excerpt_length') : 50, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
-      } else {
-        echo deel_strimwidth(strip_tags(apply_filters('the_excerpt', strip_shortcodes($post->post_excerpt))), 0, git_get_option('git_excerpt_length') < 50 ? git_get_option('git_excerpt_length') : 50, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
-      } ?></div>
+      <div>
+        <?php
+        $excerpt = $post->post_excerpt;
+        if (empty($excerpt)) {
+          echo deel_strimwidth(strip_tags(apply_filters('the_content', strip_shortcodes($post->post_content))), 0, git_get_option('git_excerpt_length') < 30 ? git_get_option('git_excerpt_length') : 30, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
+        } else {
+          echo deel_strimwidth(strip_tags(apply_filters('the_excerpt', strip_shortcodes($post->post_excerpt))), 0, git_get_option('git_excerpt_length') < 30 ? git_get_option('git_excerpt_length') : 30, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
+        } ?>
+      </div>
+    </div>
     <p class="auth-span">
       <?php
       if (!is_author() && !$_author) { ?>
