@@ -20,6 +20,10 @@
   .slick-dots button {
     margin: 0 3px;
   }
+
+  #excerpt-title {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -69,6 +73,10 @@
     font-weight: normal;
     font-size: 14px;
     border: none;
+  }
+
+  .btn:focus {
+    outline: 0;
   }
 
   .navbar .nav li:hover a,
@@ -172,6 +180,7 @@
   }
 
   #excerpt-title {
+    display: block;
     margin: 0 20px !important;
     width: 90%;
     font-size: 18px;
