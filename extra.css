@@ -87,6 +87,24 @@ body.login-action-register #login {
 
   #mobile-search {
     display: block;
+    margin-left: 4%;
+    width: 96%;
+  }
+
+  #mobile-search .searchform div input.search {
+    padding-left: 20px;
+    width: 85%;
+    height: 40px;
+  }
+
+  #mobile-search .searchform div input {
+    line-height: 40px;
+  }
+
+  #mobile-search .searchform div:after {
+    top: 8px;
+    font-size: 20px;
+    left: 320px;
   }
 
   #nav-header a {
