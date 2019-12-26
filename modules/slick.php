@@ -48,3 +48,30 @@
         echo git_get_option('git_slick6title_b'); ?></span></a></div><?php
   } ?>
 </div>
+<div id="mobile-search">
+  <?php
+  if (git_get_option('git_search_baidu')) { ?>
+    <?php
+    echo git_get_option('git_search_code'); ?>
+    <?php
+  } elseif (git_get_option('git_search') && !git_get_option('git_search_baidu')) { ?>
+    <form method="get" class="searchform themeform"
+          onsubmit="location.href='/?s=' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;"
+          action="/">
+      <div><input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='<?php
+        echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>';" onfocus="if(this.value=='<?php
+        echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>')this.value='';" value="<?php
+        echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>"></div>
+    </form>
+    <?php
+  } elseif (!git_get_option('git_search') && !git_get_option('git_search_baidu')) { ?>
+    <form method="get" class="searchform themeform" onsubmit="location.href='<?php
+    echo home_url('/search/'); ?>' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;" action="/">
+      <div><input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='<?php
+        echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>';" onfocus="if(this.value=='<?php
+        echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>')this.value='';" value="<?php
+        echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>"></div>
+    </form>
+    <?php
+  } ?>
+</div>
