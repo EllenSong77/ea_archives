@@ -112,6 +112,10 @@ body.login-action-register #login {
     width: 40%;
     float: left;
   }
+  .toggle-search {
+		position: relative !important;
+		background: #72d0eb !important;
+	}
 
   .g-logo h1 {
     padding: 0;
