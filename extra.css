@@ -1,3 +1,7 @@
+body.login-action-register #login {
+  background-image: none, url(http://www.cp4ever.com/wp-content/uploads/2019/12/2019122310043515.png);
+}
+
 .slick-slider > button {
   display: none !important;
 }
@@ -23,6 +27,14 @@
 
   #excerpt-title {
     display: none;
+  }
+
+  #mobile-search {
+    display: none;
+  }
+
+  #pc-search {
+    display: block;
   }
 }
 
@@ -67,6 +79,14 @@
 
   #nav-header li {
     background: rgb(255, 255, 255, 1);
+  }
+
+  #pc-search {
+    display: none;
+  }
+
+  #mobile-search {
+    display: block;
   }
 
   #nav-header a {
@@ -258,7 +278,6 @@
 
 }
 
-/*search和info 不可加*/
 /*字体 不可加*/
 /*自动加载取代翻页 不可改*/
 /*COPYRIGTH中HTML有文本"|" 不可改*/

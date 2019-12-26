@@ -216,10 +216,10 @@ echo git_get_option('git_customhead'); ?>') center 0px repeat-x;background-size:
     <?php
     if (git_get_option('git_bdshare_b')) echo '<style type="text/css">.bdsharebuttonbox a{cursor:pointer;border-bottom:0;margin-right:5px;width:28px;height:28px;line-height:28px;color:#fff}.bds_renren{background:#94b3eb}.bds_qzone{background:#fac33f}.bds_more{background:#40a57d}.bds_weixin{background:#7ad071}.bdsharebuttonbox a:hover{background-color:#7fb4ab;color:#fff;border-bottom:0}</style>'; ?>
 
-    <ul class="nav" style="display:none;">
+    <ul class="nav">
       <?php
       echo str_replace('</ul></div>', '', preg_replace('/<div[^>]*><ul[^>]*>/', '', wp_nav_menu(array('theme_location' => 'nav', 'echo' => false)))); ?>
-      <li style="float:right;">
+      <li id="pc-search" style="float:right;">
         <div class="toggle-search"><i class="fa fa-search"></i></div>
         <div class="search-expand" style="display: none;">
           <div class="search-expand-inner">
@@ -253,6 +253,39 @@ echo git_get_option('git_customhead'); ?>') center 0px repeat-x;background-size:
       </li>
     </ul>
     </div></div>
+    <div id="mobile-search">
+      <div class="toggle-search"><i class="fa fa-search"></i></div>
+      <div class="search-expand" style="display: none;">
+        <div class="search-expand-inner">
+          <?php
+          if (git_get_option('git_search_baidu')) { ?>
+          <?php
+          echo git_get_option('git_search_code'); ?></div>
+      </div>
+      <?php
+      } elseif (git_get_option('git_search') && !git_get_option('git_search_baidu')) { ?>
+      <form method="get" class="searchform themeform"
+            onsubmit="location.href='/?s=' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;"
+            action="/">
+        <div><input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='<?php
+          echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>';" onfocus="if(this.value=='<?php
+          echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>')this.value='';" value="<?php
+          echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>"></div>
+      </form>
+    </div>
+    </div>
+  <?php
+  } elseif (!git_get_option('git_search') && !git_get_option('git_search_baidu')) { ?>
+    <form method="get" class="searchform themeform" onsubmit="location.href='<?php
+    echo home_url('/search/'); ?>' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;" action="/">
+      <div><input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='<?php
+        echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>';" onfocus="if(this.value=='<?php
+        echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>')this.value='';" value="<?php
+        echo git_get_option('git_search_placeholder', '输入内容并回车'); ?>"></div>
+    </form></div></div>
+    <?php
+  } ?>
+    </div>
   </header>
   <section class="container">
     <div class="speedbar">
