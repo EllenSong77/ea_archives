@@ -452,7 +452,7 @@ function git_avatar_cache($avatar)
   } elseif (git_get_option('git_avater') == 'git_avatar_qn') {
     $avatar = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com"), "cd.v7v3.com", $avatar);
   } elseif (git_get_option('git_avater') == 'git_avatar_ssl') {
-    $avatar = preg_replace('/.*\/avatar\/(.*)\?s=([\d]+)&.*/', '<img src="https://secure.gravatar.com/avatar/$1?s=$2" class="avatar avatar-$2" height="50px" width="50px">', $avatar);
+    $avatar = preg_replace('/.*\/avatar\/(.*)\?s=([\d]+)&.*/', '<img src="http://www.cp4ever.com/wp-content/uploads/2020/02/2020021807013132.jpg" class="avatar avatar-$2" height="50px" width="50px">', $avatar);
   }
   return $avatar;
 }
@@ -1155,50 +1155,50 @@ function zfunc_smiley_button($custom = false, $before = '', $after = '')
   else $customsmiley_url = get_template_directory_uri() . '/css/img/smilies';
   echo $before;
   ?>
-    <a href="javascript:grin(':?:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_question.gif" alt=""/></a>
-    <a href="javascript:grin(':razz:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_razz.gif" alt=""/></a>
-    <a href="javascript:grin(':sad:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_sad.gif" alt=""/></a>
-    <a href="javascript:grin(':evil:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_evil.gif" alt=""/></a>
-    <a href="javascript:grin(':!:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_exclaim.gif" alt=""/></a>
-    <a href="javascript:grin(':smile:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_smile.gif" alt=""/></a>
-    <a href="javascript:grin(':oops:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_redface.gif" alt=""/></a>
-    <a href="javascript:grin(':grin:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_biggrin.gif" alt=""/></a>
-    <a href="javascript:grin(':eek:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_surprised.gif" alt=""/></a>
-    <a href="javascript:grin(':shock:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_eek.gif" alt=""/></a>
-    <a href="javascript:grin(':???:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_confused.gif" alt=""/></a>
-    <a href="javascript:grin(':cool:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_cool.gif" alt=""/></a>
-    <a href="javascript:grin(':lol:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_lol.gif" alt=""/></a>
-    <a href="javascript:grin(':mad:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_mad.gif" alt=""/></a>
-    <a href="javascript:grin(':twisted:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_twisted.gif" alt=""/></a>
-    <a href="javascript:grin(':roll:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_rolleyes.gif" alt=""/></a>
-    <a href="javascript:grin(':wink:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_wink.gif" alt=""/></a>
-    <a href="javascript:grin(':idea:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_idea.gif" alt=""/></a>
-    <a href="javascript:grin(':arrow:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_arrow.gif" alt=""/></a>
-    <a href="javascript:grin(':neutral:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_neutral.gif" alt=""/></a>
-    <a href="javascript:grin(':cry:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_cry.gif" alt=""/></a>
-    <a href="javascript:grin(':mrgreen:')"><img src="<?php
-      echo $customsmiley_url; ?>/icon_mrgreen.gif" alt=""/></a>
+  <a href="javascript:grin(':?:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_question.gif" alt=""/></a>
+  <a href="javascript:grin(':razz:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_razz.gif" alt=""/></a>
+  <a href="javascript:grin(':sad:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_sad.gif" alt=""/></a>
+  <a href="javascript:grin(':evil:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_evil.gif" alt=""/></a>
+  <a href="javascript:grin(':!:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_exclaim.gif" alt=""/></a>
+  <a href="javascript:grin(':smile:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_smile.gif" alt=""/></a>
+  <a href="javascript:grin(':oops:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_redface.gif" alt=""/></a>
+  <a href="javascript:grin(':grin:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_biggrin.gif" alt=""/></a>
+  <a href="javascript:grin(':eek:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_surprised.gif" alt=""/></a>
+  <a href="javascript:grin(':shock:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_eek.gif" alt=""/></a>
+  <a href="javascript:grin(':???:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_confused.gif" alt=""/></a>
+  <a href="javascript:grin(':cool:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_cool.gif" alt=""/></a>
+  <a href="javascript:grin(':lol:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_lol.gif" alt=""/></a>
+  <a href="javascript:grin(':mad:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_mad.gif" alt=""/></a>
+  <a href="javascript:grin(':twisted:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_twisted.gif" alt=""/></a>
+  <a href="javascript:grin(':roll:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_rolleyes.gif" alt=""/></a>
+  <a href="javascript:grin(':wink:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_wink.gif" alt=""/></a>
+  <a href="javascript:grin(':idea:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_idea.gif" alt=""/></a>
+  <a href="javascript:grin(':arrow:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_arrow.gif" alt=""/></a>
+  <a href="javascript:grin(':neutral:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_neutral.gif" alt=""/></a>
+  <a href="javascript:grin(':cry:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_cry.gif" alt=""/></a>
+  <a href="javascript:grin(':mrgreen:')"><img src="<?php
+    echo $customsmiley_url; ?>/icon_mrgreen.gif" alt=""/></a>
   <?php
   echo $after;
 }
@@ -1769,42 +1769,42 @@ class Simple_Local_Avatars
   public function edit_user_profile($profileuser)
   {
     ?>
-      <h3><?php
-        _e('头像', 'simple-local-avatars'); ?></h3>
+    <h3><?php
+      _e('头像', 'simple-local-avatars'); ?></h3>
 
-      <table class="form-table">
-          <tr>
-              <th><label for="simple-local-avatar"><?php
-                  _e('上传头像', 'simple-local-avatars'); ?></label></th>
-              <td style="width: 50px;" valign="top">
-                <?php
-                echo get_avatar($profileuser->ID); ?>
-              </td>
-              <td>
-                <?php
-                $options = get_option('simple_local_avatars_caps');
-                if (empty($options['simple_local_avatars_caps']) || current_user_can('upload_files')) {
-                  do_action('simple_local_avatar_notices');
-                  wp_nonce_field('simple_local_avatar_nonce', '_simple_local_avatar_nonce', false);
-                  ?>
-                    <input type="file" name="simple-local-avatar" id="simple-local-avatar"/><br/>
-                  <?php
-                  if (empty($profileuser->simple_local_avatar)) echo '<span class="description">' . __('尚未设置本地头像，请点击“浏览”按钮上传本地头像。', 'simple-local-avatars') . '</span>';
-                  else echo '
+    <table class="form-table">
+      <tr>
+        <th><label for="simple-local-avatar"><?php
+            _e('上传头像', 'simple-local-avatars'); ?></label></th>
+        <td style="width: 50px;" valign="top">
+          <?php
+          echo get_avatar($profileuser->ID); ?>
+        </td>
+        <td>
+          <?php
+          $options = get_option('simple_local_avatars_caps');
+          if (empty($options['simple_local_avatars_caps']) || current_user_can('upload_files')) {
+            do_action('simple_local_avatar_notices');
+            wp_nonce_field('simple_local_avatar_nonce', '_simple_local_avatar_nonce', false);
+            ?>
+            <input type="file" name="simple-local-avatar" id="simple-local-avatar"/><br/>
+            <?php
+            if (empty($profileuser->simple_local_avatar)) echo '<span class="description">' . __('尚未设置本地头像，请点击“浏览”按钮上传本地头像。', 'simple-local-avatars') . '</span>';
+            else echo '
                             <input type="checkbox" name="simple-local-avatar-erase" value="1" /> ' . __('移除本地头像', 'simple-local-avatars') . '<br />
                             <span class="description">' . __('如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本地头像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头像。', 'simple-local-avatars') . '</span>
                         ';
-                } else {
-                  if (empty($profileuser->simple_local_avatar)) echo '<span class="description">' . __('尚未设置本地头像，请在 Gravatar.com 网站设置头像。', 'simple-local-avatars') . '</span>';
-                  else echo '<span class="description">' . __('你没有头像上传权限，如需要修改本地头像，请联系站点管理员。', 'simple-local-avatars') . '</span>';
-                }
-                ?>
-              </td>
-          </tr>
-      </table>
-      <script type="text/javascript">var form = document.getElementById('your-profile');
-          form.encoding = 'multipart/form-data';
-          form.setAttribute('enctype', 'multipart/form-data');</script>
+          } else {
+            if (empty($profileuser->simple_local_avatar)) echo '<span class="description">' . __('尚未设置本地头像，请在 Gravatar.com 网站设置头像。', 'simple-local-avatars') . '</span>';
+            else echo '<span class="description">' . __('你没有头像上传权限，如需要修改本地头像，请联系站点管理员。', 'simple-local-avatars') . '</span>';
+          }
+          ?>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript">var form = document.getElementById('your-profile');
+      form.encoding = 'multipart/form-data';
+      form.setAttribute('enctype', 'multipart/form-data');</script>
     <?php
   }
 
@@ -1994,22 +1994,22 @@ add_action('register_form', 'git_show_extra_register_fields');
 function git_show_extra_register_fields()
 {
   ?>
-    <p>
-        <label for="password">填写密码<br/>
-            <input id="password" class="input" type="password" tabindex="30" size="25" value="" name="password"/>
-        </label>
-    </p>
-    <p>
-        <label for="repeat_password">重填密码<br/>
-            <input id="repeat_password" class="input" type="password" tabindex="40" size="25" value=""
-                   name="repeat_password"/>
-        </label>
-    </p>
-    <p>
-        <label for="are_you_human" style="font-size:11px">为防止垃圾注册，请输入本站名称<br/>
-            <input id="are_you_human" class="input" type="text" tabindex="40" size="25" value="" name="are_you_human"/>
-        </label>
-    </p>
+  <p>
+    <label for="password">填写密码<br/>
+      <input id="password" class="input" type="password" tabindex="30" size="25" value="" name="password"/>
+    </label>
+  </p>
+  <p>
+    <label for="repeat_password">重填密码<br/>
+      <input id="repeat_password" class="input" type="password" tabindex="40" size="25" value=""
+             name="repeat_password"/>
+    </label>
+  </p>
+  <p>
+    <label for="are_you_human" style="font-size:11px">为防止垃圾注册，请输入本站名称<br/>
+      <input id="are_you_human" class="input" type="text" tabindex="40" size="25" value="" name="are_you_human"/>
+    </label>
+  </p>
   <?php
 }
 
@@ -2757,5 +2757,53 @@ function php_include($attr)
 }
 
 add_shortcode('phpcode', 'php_include');
+
+function get_pagenavi($range = 4)
+{
+  global $paged, $wp_query;
+  if (!$max_page) {
+    $max_page = $wp_query->max_num_pages;
+  }
+  if ($max_page > 1) {
+    if (!$paged) {
+      $paged = 1;
+    }
+    echo "<li>";
+    previous_posts_link('上一页');
+    echo "</li>";
+    if ($max_page > $range) {
+      if ($paged < $range) {
+        for ($i = 1; $i <= ($range + 1); $i++) {
+          echo "<li><a href='" . get_pagenum_link($i) . "'";
+          if ($i == $paged) echo " class='current'";
+          echo ">$i</a></li>";
+        }
+      } elseif ($paged >= ($max_page - ceil(($range / 2)))) {
+        for ($i = $max_page - $range; $i <= $max_page; $i++) {
+          echo "<li><a href='" . get_pagenum_link($i) . "'";
+          if ($i == $paged) echo " class='current'";
+          echo ">$i</a></li>";
+        }
+      } elseif ($paged >= $range && $paged < ($max_page - ceil(($range / 2)))) {
+        for ($i = ($paged - ceil($range / 2)); $i <= ($paged + ceil(($range / 2))); $i++) {
+          echo "<li><a href='" . get_pagenum_link($i) . "'";
+          if ($i == $paged) echo " class='current'";
+          echo ">$i</a></li>";
+        }
+      }
+    } else {
+      for ($i = 1; $i <= $max_page; $i++) {
+        echo "<li><a href='" . get_pagenum_link($i) . "'";
+        if ($i == $paged) echo " class='current'";
+        echo ">$i</a></li>";
+      }
+    }
+    echo "<li>";
+    next_posts_link('下一页');
+    echo "</li>";
+    echo '<li><span>共' . $max_page . '页</span></li>';
+  }
+}
+
 //WordPress函数代码结束,打算在本文件添加代码的建议参照这个方法：http://googlo.me/archives/4032.html
 ?>
