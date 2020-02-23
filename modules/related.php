@@ -93,7 +93,7 @@
           'post__not_in' => explode(',', $exclude_id),
           'caller_get_posts' => 1,
           'offset' => 4,
-          'orderby' => 'comment_date',
+          'orderby' => 'rand',
           'posts_per_page' => $limit
         );
         query_posts($args);
@@ -112,7 +112,7 @@
           'category__in' => explode(',', $cats),
           'post__not_in' => explode(',', $exclude_id),
           'caller_get_posts' => 1,
-          'orderby' => 'comment_date',
+          'orderby' => 'rand',
           'posts_per_page' => $limit - $i
         );
         query_posts($args);
