@@ -7,6 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Cache-Control" content="no-transform"/>
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta http-equiv="Cache-Control"content="no-cache"/>
   <meta property="wb:webmaster" content="5da24fdeade5db8a"/>
   <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
   <meta name="viewport"

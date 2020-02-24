@@ -1665,7 +1665,9 @@ jQuery(document).ready(function () {
       document.documentElement.scrollTop + document.body.scrollTop > 200 ? b.fadeIn() : b.fadeOut()
     })), j = a("#nav-header").offset().top, a(window).scroll(function () {
       a(window).scrollTop() > j && a(window).width() > 719 ? a("#nav-header").addClass("fixed") : a("#nav-header").removeClass("fixed")
-    }), a(".navbar .nav:first").after('<div class="screen-mini"><button data-type="screen-nav" class="btn btn-inverse screen-nav"><i class="fa fa-list"></i></button></div>'), a("body").append('<div class="rollto"><button class="btn btn-inverse" data-type="totop" title="回顶部"><i class="fa fa-arrow-up"></i></button>' + (_deel.commenton ? '<button class="btn btn-inverse" data-type="torespond" title="发评论"><i class="fa fa-comment-o"></i></button>' : "") + "</div>"), function (a) {
+    }), a(".navbar .nav:first").after('<div class="screen-mini"><button data-type="screen-nav" class="btn btn-inverse screen-nav"><i class="fa fa-list"></i></button></div>'), a("body").append('' +
+      '<div id="qsupport"><a id="inner-qsupport"><a href="http://wpa.qq.com/msgrd?v=3&uin=1776373039&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1776373039:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></div></div>' +
+      '<div class="rollto"><button class="btn btn-inverse" data-type="totop" title="回顶部"><i class="fa fa-arrow-up"></i></button>' + (_deel.commenton ? '<button class="btn btn-inverse" data-type="torespond" title="发评论"><i class="fa fa-comment-o"></i></button>' : "") + "</div>"), function (a) {
       a.extend({
         tipsBox: function (b) {
           var c, d, e;
