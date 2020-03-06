@@ -81,6 +81,10 @@ body.login-action-register #login {
     border-bottom: unset !important;
   }
 
+  #qqkefuDv .qqnum {
+    height: 40px !important;
+  }
+
   #nav-header ul {
     position: absolute !important;
     text-align: center;
@@ -315,6 +319,17 @@ body.login-action-register #login {
     margin: 0;
     padding: 0;
     text-align: center;
+  }
+
+  .article-title a {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500px;
+  }
+
+  .article-content {
+    font-size: 19px !important;
+    line-height: 30px !important;
   }
 
 }
