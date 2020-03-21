@@ -324,12 +324,63 @@ body.login-action-register #login {
   .article-title a {
     font-size: 24px;
     line-height: 34px;
-    font-weight: 500px;
+    font-weight: 500;
+    color: #000;
   }
 
   .article-content {
-    font-size: 19px !important;
-    line-height: 30px !important;
+    font-size: 19px;
+    line-height: 34px;
+    color: #222;
   }
 
+  .open-message {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .fenye {
+    font-size: 13px;
+  }
+
+  .article-nav {
+    font-size: 13px;
+  }
+
+  .post-series-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 !important;
+  }
+
+  li.post-series-item {
+    font-size: 12px;
+    width: 32%;
+    height: 100px;
+    display: flex;
+    border: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .article-content li:before {
+    content: none;
+  }
+
+  .post-series-item-title {
+    margin: 0px 5px;
+    line-height: 20px;
+  }
+
+  .post-series-nav {
+    font-size: 14px;
+  }
+
+  .post-series-nav-next {
+    margin: 0;
+    float: right;
+  }
 }
