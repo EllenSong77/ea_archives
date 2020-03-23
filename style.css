@@ -8603,10 +8603,10 @@ pre.prettyprint {
   display: none !important
 }
 
-.article-content h3 {
-  border-left: 2px solid #0095ff;
-  background-color: #fbfbfb
-}
+/*.article-content h3 {*/
+/*  border-left: 2px solid #0095ff;*/
+/*  background-color: #fbfbfb*/
+/*}*/
 
 input {
   padding: 0 20px;

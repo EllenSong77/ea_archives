@@ -67,9 +67,9 @@ while (have_posts()):
         <?php
         $excerpt = $post->post_excerpt;
         if (empty($excerpt)) {
-          echo deel_strimwidth(strip_tags(apply_filters('the_content', strip_shortcodes($post->post_content))), 0, git_get_option('git_excerpt_length') < 50 ? git_get_option('git_excerpt_length') : 50, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
+          echo deel_strimwidth(strip_tags(apply_filters('the_content', strip_shortcodes($post->post_content))), 0, git_get_option('git_excerpt_length') < 40 ? git_get_option('git_excerpt_length') : 40, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
         } else {
-          echo deel_strimwidth(strip_tags(apply_filters('the_excerpt', strip_shortcodes($post->post_excerpt))), 0, git_get_option('git_excerpt_length') < 50 ? git_get_option('git_excerpt_length') : 50, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
+          echo deel_strimwidth(strip_tags(apply_filters('the_excerpt', strip_shortcodes($post->post_excerpt))), 0, git_get_option('git_excerpt_length') < 40 ? git_get_option('git_excerpt_length') : 40, '……<a href="' . get_permalink() . '" rel="nofollow" class="more-link">继续阅读 &raquo;</a>');
         } ?>
       </div>
     </div>
