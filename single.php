@@ -106,14 +106,19 @@
             'next_or_number' => 'next',
             'previouspagelink' => '<span>上一页</span>',
             'nextpagelink' => ""
-          )); ?>   <?php
-          wp_link_pages(array(
-            'before' => '',
-            'after' => '',
-            'next_or_number' => 'number',
-            'link_before' => '<span>',
-            'link_after' => '</span>'
-          )); ?>   <?php
+          )); ?>
+          <?php
+          if (wp_is_mobile()) {
+          } else {
+            wp_link_pages(array(
+              'before' => '',
+              'after' => '',
+              'next_or_number' => 'number',
+              'link_before' => '<span>',
+              'link_after' => '</span>'
+            ));
+          }?>
+          <?php
           wp_link_pages(array(
             'before' => '',
             'after' => '</div>',
