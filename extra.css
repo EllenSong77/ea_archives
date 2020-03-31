@@ -2,6 +2,11 @@ body.login-action-register #login {
   background-image: none, url(http://www.cp4ever.com/wp-content/uploads/2019/12/2019122310043515.png);
 }
 
+/* .single-reg-question .reg-radio {
+	height: 1rem!important;
+	width: 1rem!important;
+} */
+
 .slick-slider > button {
   display: none !important;
 }
@@ -54,6 +59,11 @@ body.login-action-register #login {
 }
 
 @media screen and (max-width: 800px) {
+
+  .reg-radio {
+    height: 1rem !important;
+    width: 1rem !important;
+  }
 
   body.home {
     background-color: #ffffff;
@@ -293,22 +303,19 @@ body.login-action-register #login {
 
   .excerpt .focus {
     position: absolute;
+    right: 0px;
+    margin-right: 0;
     /* 		top: 50%; */
     /* 		margin-top: -35px; */
   }
 
   .excerpt .note {
-    margin-left: 100px;
     color: #000000;
     position: relative;
   }
 
   .excerpt .note div {
     word-break: break-all;
-  }
-
-  .excerpt .note div a {
-    display: none;
   }
 
   /* 	.excerpt .note div{ */

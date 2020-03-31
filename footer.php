@@ -47,6 +47,49 @@ echo esc_url(get_template_directory_uri()); ?>/css/img/footbg.jpg'); background-
       <span class="trackcode pull-right"><?php
         if (git_get_option('git_track')) echo git_get_option('git_track'); ?></span></div>
   </div>
+  <script type="text/javascript">
+    //夜间模式
+    (function(){
+      if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
+        // if(new Date().getHours() > 22 || new Date().getHours() < 6){
+        //   document.body.classList.add('night');
+        //   document.cookie = "night=1;path=/";
+        //   console.log('夜间模式开启');
+        // }else{
+        //   document.body.classList.remove('night');
+        //   document.cookie = "night=0;path=/";
+        //   console.log('夜间模式关闭');
+        // }
+      }else{
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+        if(night == '0'){
+          document.body.classList.remove('night');
+        }else if(night == '1'){
+          document.body.classList.add('night');
+        }
+      }
+    })();
+    //夜间模式切换
+    function switchNightMode(){
+      var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+      if(night == '0'){
+        document.body.classList.add('night');
+        document.cookie = "night=1;path=/";
+        document.querySelector("#night-switch a").innerText = "夜晚模式";
+      }else{
+        document.body.classList.remove('night');
+        document.cookie = "night=0;path=/";
+        document.querySelector("#night-switch a").innerText = "白日模式";
+      }
+    }
+  </script>
+  <button id="night-switch" class="btn" ><a href="javascript:switchNightMode()" target="_self">
+      <?php if ($_COOKIE['night'] == '1') {
+        echo "夜晚模式";
+      } else {
+        echo "白日模式";
+      }
+      ?></a></button>
 </footer>
 <?php
 if (git_get_option('git_copydialog_b') && is_singular()) echo '<script type="text/javascript">document.body.oncopy=function(){alert("复制成功！若要转载请务必保留原文链接，申明来源，谢谢合作！");}</script>'; ?>

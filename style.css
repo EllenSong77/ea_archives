@@ -1,16 +1,16 @@
 ﻿﻿
 
 /*
-	Theme Name: Git-master
-	Theme URI: http://googlo.me/
-	Description: Git主题，由云落基于yusi主题基础上二次开发的一款功能强大具有超强自定义能力的主题。代码已开源至<a target="_blank" href="https://coding.net/u/googlo/p/Git/git">Coding</a>，欢迎斧正！
-	Author: 云落
-	Author URI: http://googlo.me/
-	details URI: https://coding.net/u/googlo/p/Git/git/plot
-	Version: 7.5 Finally
-	License: GNU General Public License v2 or later
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Tags: 响应式,短代码,绿色,多彩,双栏,博客主题,小清新,代码高亮,强大,免费主题,CMS主题,卡片式,图片主题,在线更新
+  Theme Name: Git-master
+  Theme URI: http://googlo.me/
+  Description: Git主题，由云落基于yusi主题基础上二次开发的一款功能强大具有超强自定义能力的主题。代码已开源至<a target="_blank" href="https://coding.net/u/googlo/p/Git/git">Coding</a>，欢迎斧正！
+  Author: 云落
+  Author URI: http://googlo.me/
+  details URI: https://coding.net/u/googlo/p/Git/git/plot
+  Version: 7.5 Finally
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Tags: 响应式,短代码,绿色,多彩,双栏,博客主题,小清新,代码高亮,强大,免费主题,CMS主题,卡片式,图片主题,在线更新
 */
 
 
@@ -7344,7 +7344,7 @@ a.badge-inverse:hover .label-arrow, a.label-inverse:hover .label-arrow {
 
 .hot-posts {
   clear: both;
-  background-color: #fff
+  /*background-color: #fff*/
 }
 
 .hot-posts a {
@@ -8481,14 +8481,14 @@ pre.prettyprint {
   position: absolute;
   right: 10px;
   bottom: 10px;
-  width: auto
+  width: auto;
 }
 
 .slick-dots li {
   display: inline-block;
   width: auto;
   height: 20px;
-  margin: 0 0 0 5px
+  margin: 0 0 0 5px;
 }
 
 .slick-dots li button {
@@ -8496,7 +8496,7 @@ pre.prettyprint {
   width: 20px;
   height: 10px;
   border-radius: 5px;
-  background-color: #fff
+  background-color: #fff;
 }
 
 .slick-dots li button:before {
@@ -8505,7 +8505,7 @@ pre.prettyprint {
 
 .slick-dots .slick-active button {
   width: 50px;
-  background-color: #48d8ff
+  background-color: #48d8ff !important;
 }
 
 .slick-next, .slick-prev {
@@ -9387,4 +9387,159 @@ input {
   color: #000;
   font-size: 13px;
   margin-bottom: 10px
+}
+
+body.night.mobile-mode xxx {
+  background-color: #191919;
+  color: #aaa;
+}
+
+body.night.mobile-mode img {
+  filter: brightness(80%);
+}
+
+body.night.mobile-mode, body.night.mobile-mode #body, body.night.mobile-mode .page_navi a.current {
+  background-color: #191919 !important;
+  color: #888282 !important;
+}
+
+body.night.mobile-mode #sidebar, body.night.mobile-mode .next-page a {
+  background-color: #191919;
+  color: #888282;
+}
+
+body.night.mobile-mode #content .post p a, body.night.mobile-mode .floor {
+  color: #af8f77;
+}
+
+body.night.mobile-mode .shang {
+  color: #191919;
+}
+
+body.night.mobile-mode .shang {
+  background-color: #ab9a6d;
+}
+
+body.night.mobile-mode img, body.night.mobile-mode .icon_qq, body.night.mobile-mode .icon_facebook, body.night.mobile-mode .icon_rss, body.night.mobile-mode .icon_weixin, body.night.mobile-mode .icon_github, body.night.mobile-mode .bozhugravatar a, body.night.mobile-mode .left-col {
+  filter: brightness(80%);
+}
+
+body.night.mobile-mode a, body.night.mobile-mode a:link, body.night.mobile-mode a:visited {
+  color: #989292;
+}
+
+body.night.mobile-mode #comments form textarea, body.night.mobile-mode #comments form input {
+  background-color: #191919;
+  color: #888282;
+}
+
+body.night.mobile-mode #content .menufeng {
+  border-bottom: 1px solid #989292;
+}
+
+body.night.mobile-mode #footer, body.night.mobile-mode #xgwz, body.night.mobile-mode #comments {
+  border-top: 1px solid #989292;
+}
+
+body.night.mobile-mode #comments form textarea, body.night.mobile-mode #comments form input, body.night.mobile-mode #shangerweima {
+  border: 1px solid #989292;
+}
+
+body.night.mobile-mode #nav .menu ul {
+  background: #3e4c52;
+}
+
+/*====================DIY========================*/
+
+#night-switch {
+  bottom: 50px;
+  right: 10px;
+  position: fixed !important;
+  z-index: 99999;
+  border-radius: 5px;
+  padding-top: 0;
+  height: 24px;
+  line-height: 24px;
+}
+
+#night-switch a {
+  color: #ffffff;
+}
+
+#night-switch {
+  display: none;
+}
+
+.mobile-mode #night-switch {
+  display: block;
+}
+
+body.night.mobile-mode #header,
+body.night.mobile-mode input.search,
+body.night.mobile-mode .excerpt,
+body.night.mobile-mode .breadcrumbs,
+body.night.mobile-mode blockquote,
+body.night.mobile-mode .open-message,
+body.night.mobile-mode .comt-area,
+body.night.mobile-mode .c-main,
+body.night.mobile-mode .post-series-item,
+body.night.mobile-mode .pagination a {
+  background-color: #2A2A2A !important;
+}
+
+body.night.mobile-mode .pagination,
+body.night.mobile-mode .article-header,
+body.night.mobile-mode .article-content,
+body.night.mobile-mode .article-footer,
+body.night.mobile-mode .related_top,
+body.night.mobile-mode .article-nav,
+body.night.mobile-mode .related_posts,
+body.night.mobile-mode .related_posts ul,
+body.night.mobile-mode #respond,
+body.night.mobile-mode #respond .comt-title,
+body.night.mobile-mode #postcomments,
+body.night.mobile-mode .pagecontent,
+body.night.mobile-mode .pageheader {
+  background-color: #191919 !important;
+}
+
+body.night.mobile-mode button {
+  filter: brightness(80%);
+}
+
+body.night.mobile-mode .hot-posts h2,
+body.night.mobile-mode #excerpt-title,
+body.night.mobile-mode .article-excerpt {
+  color: #989292 !important;
+}
+
+body.night.mobile-mode .hot-posts li,
+body.night.mobile-mode .article-social,
+body.night.mobile-mode .fenye,
+body.night.mobile-mode .pagination li.active span {
+  filter: brightness(80%);
+}
+
+body.night.mobile-mode .slick-dots button {
+  background-color: #ccc;
+}
+
+body.night.mobile-mode .hot-posts li a {
+  color: #f2f3f4 !important;
+}
+
+body.night.mobile-mode .excerpt {
+  border: none !important;
+}
+
+body.night.mobile-mode .article-content {
+  color: #ccc !important;
+}
+
+body.night.mobile-mode .open-message {
+  border: none;
+}
+
+body.night footer {
+  color: unset;
 }

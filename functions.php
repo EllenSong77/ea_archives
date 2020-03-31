@@ -334,7 +334,7 @@ function footerScript()
     $rand_ver = mt_rand(1, 9999999);
     wp_register_script('default', get_template_directory_uri() . '/js/global.js?v=' . $rand_ver, false, '1.0', true);
     wp_enqueue_script('default');
-    wp_register_style('style', get_template_directory_uri() . '/style.css', false, '1.0');
+    wp_register_style('style', get_template_directory_uri() . '/style.css?v=' . $rand_ver, false, '1.0');
     wp_enqueue_style('style');
   }
 }
@@ -619,7 +619,7 @@ function comment_mail_notify($comment_id)
 //自动勾选
 function deel_add_checkbox()
 {
-  echo '<label for="comment_mail_notify" class="checkbox inline" style="padding-top:0"><input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked"/>有人回复时通知我</label>';
+  echo '<label for="comment_mail_notify" class="checkbox inline" style="padding-top:0"><input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked"/>回复通知</label>';
 }
 
 //时间显示方式‘xx以前’

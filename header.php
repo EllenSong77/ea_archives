@@ -1,5 +1,5 @@
 <!--
-苍茫的代码是我的爱！！！
+档案室的小姐姐最可爱！！！
 -->
 <!DOCTYPE HTML>
 <html>
@@ -13,7 +13,8 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
   <meta baidu-gxt-verify-token="b24b3741679f5a6b363234c4c5ab5d51">
-  <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!--  <link href="/favicon.ico" rel="icon" type="image/x-icon"/>-->
   <?php
   if (git_get_option('git_robot_b')): ?>
     <?php
@@ -76,8 +77,16 @@
 </head>
 <?php
 if (git_get_option('git_customcss')) echo '<style type="text/css">' . git_get_option('git_customcss') . '</style>'; ?>
-<body <?php
-body_class(); ?>>
+<body
+  <?php
+  $extra_cls[] = array();
+  if (wp_is_mobile()) {
+    array_push($extra_cls, "mobile-mode");
+    if ($_COOKIE['night'] == '1') {
+      array_push($extra_cls, "night");
+    }
+  }
+  body_class($extra_cls); ?>>
 <?php
 if (!git_get_option('git_pichead_b')) { ?>
   <?php
