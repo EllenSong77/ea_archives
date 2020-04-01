@@ -102,7 +102,7 @@ if ($comment->comment_approved == '0') {
 echo '<div class="c-meta">';
 echo '<span class="c-author">' . get_comment_author_link() . '</span>';
 echo get_comment_time('m-d H:i ');
-echo time_ago();
+echo time_ago("comment");
 echo '</div>';
 echo '</div></div>';
 ?>
