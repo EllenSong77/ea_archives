@@ -1163,7 +1163,7 @@ switch ($action) {
 
       ?>
       <p id="reg_passmail">
-        <?php _e('Registration confirmation will be emailed to you.'); ?>
+        请输入“Elsanna档案室”，首字母E大写
       </p>
       <br class="clear"/>
       <input type="hidden" name="redirect_to" value="<?php echo esc_attr($redirect_to); ?>"/>
