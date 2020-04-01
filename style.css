@@ -7344,7 +7344,7 @@ a.badge-inverse:hover .label-arrow, a.label-inverse:hover .label-arrow {
 
 .hot-posts {
   clear: both;
-  /*background-color: #fff*/
+  background-color: #fff;
 }
 
 .hot-posts a {
@@ -9483,7 +9483,10 @@ body.night.mobile-mode .open-message,
 body.night.mobile-mode .comt-area,
 body.night.mobile-mode .c-main,
 body.night.mobile-mode .post-series-item,
-body.night.mobile-mode .pagination a {
+body.night.mobile-mode .pagination a,
+body.night.mobile-mode .widget,
+body.night.mobile-mode .muted,
+body.night.mobile-mode .sg-author {
   background-color: #2A2A2A !important;
 }
 
@@ -9522,6 +9525,10 @@ body.night.mobile-mode .pagination li.active span {
 
 body.night.mobile-mode .slick-dots button {
   background-color: #ccc;
+}
+
+body.night.mobile-mode .hot-posts {
+  background-color: unset;
 }
 
 body.night.mobile-mode .hot-posts li a {
