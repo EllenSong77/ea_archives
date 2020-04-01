@@ -1107,21 +1107,51 @@ switch ($action) {
     $user_login = '';
     $user_email = '';
 
+    // 定义变量并默认设置为空值
+    $json_string = file_get_contents('questions.json');
+    $question_list = json_decode($json_string, true);
+
+    function check_answer($data, $idxs, $d0, $d1, $d2)
+    {
+      if (empty($d0) || empty($d1) || empty($d2)) {
+        return false;
+      }
+      if ($d0 != $data[$idxs[0]]["value"]) {
+        return false;
+      }
+      if ($d1 != $data[$idxs[1]]["value"]) {
+        return false;
+      }
+      if ($d2 != $data[$idxs[2]]["value"]) {
+        return false;
+      }
+      return true;
+    }
+
     if ($http_post) {
-      if (isset($_POST['user_login']) && is_string($_POST['user_login'])) {
-        $user_login = $_POST['user_login'];
-      }
+      $user_answer_1 = $_POST['user_answer_0'];
+      $user_answer_2 = $_POST['user_answer_1'];
+      $user_answer_3 = $_POST['user_answer_2'];
+      $chosen = $_POST['chosen'];
 
-      if (isset($_POST['user_email']) && is_string($_POST['user_email'])) {
-        $user_email = wp_unslash($_POST['user_email']);
-      }
+      if (!check_answer($question_list, $chosen, $user_answer_1, $user_answer_2, $user_answer_3)) {
+        echo "<script>alert('在考虑一下答案吧~')</script>";
+      } else {
+        if (isset($_POST['user_login']) && is_string($_POST['user_login'])) {
+          $user_login = $_POST['user_login'];
+        }
 
-      $errors = register_new_user($user_login, $user_email);
+        if (isset($_POST['user_email']) && is_string($_POST['user_email'])) {
+          $user_email = wp_unslash($_POST['user_email']);
+        }
 
-      if (!is_wp_error($errors)) {
-        $redirect_to = !empty($_POST['redirect_to']) ? $_POST['redirect_to'] : 'wp-login.php?checkemail=registered';
-        wp_safe_redirect($redirect_to);
-        exit();
+        $errors = register_new_user($user_login, $user_email);
+
+        if (!is_wp_error($errors)) {
+          $redirect_to = !empty($_POST['redirect_to']) ? $_POST['redirect_to'] : 'wp-login.php?checkemail=registered';
+          wp_safe_redirect($redirect_to);
+          exit();
+        }
       }
     }
 
@@ -1162,9 +1192,26 @@ switch ($action) {
       do_action('register_form');
 
       ?>
-      <p id="reg_passmail">
-        请输入“Elsanna档案室”，首字母E大写
-      </p>
+      <div class="reg-question">
+        <?php
+        $json_string = file_get_contents('questions.json');
+        $question_list = json_decode($json_string, true);
+        $chosen = array_rand($question_list, 3);
+        foreach ($chosen as $c_idx => $c) { ?>
+          <div class="single-reg-question">
+            <?php
+            $current_c = $question_list[$c];
+            $show_idx = $c_idx + 1;
+            echo "{$show_idx}. {$current_c["question"]}<br>";
+            foreach ($current_c["answer"] as $item_idx => $item) {
+              echo "<input class='reg-radio' type='radio' name='user_answer_$c_idx' value='$item'>$item";
+            } ?>
+            <input type="hidden" name="chosen[<?php echo $c_idx ?>]" value="<?php echo $c ?>"/>
+          </div>
+
+        <?php } ?>
+      </div>
+
       <br class="clear"/>
       <input type="hidden" name="redirect_to" value="<?php echo esc_attr($redirect_to); ?>"/>
       <p class="submit">

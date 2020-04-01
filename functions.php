@@ -2006,11 +2006,6 @@ function git_show_extra_register_fields()
              name="repeat_password"/>
     </label>
   </p>
-  <p>
-    <label for="are_you_human" style="font-size:11px">为防止垃圾注册，请输入本站名称<br/>
-      <input id="are_you_human" class="input" type="text" tabindex="40" size="25" value="" name="are_you_human"/>
-    </label>
-  </p>
   <?php
 }
 
@@ -2022,9 +2017,6 @@ function git_check_extra_register_fields($login, $email, $errors)
   }
   if (strlen($_POST['password']) < 8) {
     $errors->add('password_too_short', "<strong>错误提示</strong>: 密码必须大于8个字符");
-  }
-  if ($_POST['are_you_human'] !== get_bloginfo('name')) {
-    $errors->add('not_human', "<strong>错误提示</strong>: 您为填写验证问题或者验证问题错误");
   }
 }
 
