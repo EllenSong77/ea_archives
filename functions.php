@@ -627,7 +627,7 @@ function time_ago($type = 'comment', $day = 7)
 {
   $d = $type == 'post' ? 'get_post_time' : 'get_comment_time';
   if (time() - $d('U') > 60 * 60 * 24 * $day) return;
-  echo ' (', human_time_diff($d('U'), current_time('timestamp')), '前)';
+  echo ' (', human_time_diff($d('U'), strtotime(current_time('mysql', 0))), '前)';
 }
 
 function timeago($ptime)
@@ -2797,6 +2797,17 @@ function get_pagenavi($range = 4)
     echo '<li><span>共' . $max_page . '页</span></li>';
   }
 }
+
+
+function minimal_comment_length( $commentdata ) {
+	$minimalCommentLength = 10;
+	if ( strlen( trim( $commentdata['comment_content'] ) ) < $minimalCommentLength )
+        {
+		err(__( '抱歉，您的评论太短了，请至少输入 5个字！' ));
+        }
+	return $commentdata;
+}
+add_filter( 'preprocess_comment', 'minimal_comment_length' );
 
 //WordPress函数代码结束,打算在本文件添加代码的建议参照这个方法：http://googlo.me/archives/4032.html
 ?>

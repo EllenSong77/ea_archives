@@ -49,8 +49,8 @@ echo esc_url(get_template_directory_uri()); ?>/css/img/footbg.jpg'); background-
   </div>
   <script type="text/javascript">
     //夜间模式
-    (function(){
-      if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
+    (function () {
+      if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
         // if(new Date().getHours() > 22 || new Date().getHours() < 6){
         //   document.body.classList.add('night');
         //   document.cookie = "night=1;path=/";
@@ -60,30 +60,31 @@ echo esc_url(get_template_directory_uri()); ?>/css/img/footbg.jpg'); background-
         //   document.cookie = "night=0;path=/";
         //   console.log('夜间模式关闭');
         // }
-      }else{
+      } else {
         var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-        if(night == '0'){
+        if (night == '0') {
           document.body.classList.remove('night');
-        }else if(night == '1'){
+        } else if (night == '1') {
           document.body.classList.add('night');
         }
       }
     })();
+
     //夜间模式切换
-    function switchNightMode(){
+    function switchNightMode() {
       var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-      if(night == '0'){
+      if (night == '0') {
         document.body.classList.add('night');
         document.cookie = "night=1;path=/";
         document.querySelector("#night-switch a").innerText = "夜晚模式";
-      }else{
+      } else {
         document.body.classList.remove('night');
         document.cookie = "night=0;path=/";
         document.querySelector("#night-switch a").innerText = "白日模式";
       }
     }
   </script>
-  <button id="night-switch" class="btn" ><a href="javascript:switchNightMode()" target="_self">
+  <button id="night-switch" class="btn"><a href="javascript:switchNightMode()" target="_self">
       <?php if ($_COOKIE['night'] == '1') {
         echo "夜晚模式";
       } else {
@@ -143,5 +144,22 @@ if ($dHasShare == true) {
   echo '<script>with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="' . get_template_directory_uri() . '/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];</script>';
 }
 ?>
+
+<div style="display:none;">
+  <?php if (have_posts()) : ?>
+    <?php while (have_posts()) :
+
+      the_post(); //输出当前文章的内容
+      //循环开始后，可以在循环中用the_title();输出文章的标题
+      //the_content();输出文章的内容
+      //the_author();输出文章的作者
+      the_title();
+      the_author();
+      ?>
+      <br>
+    <?php endwhile; ?>
+  <?php endif; ?>
+</div>
+
 </body>
 </html>
